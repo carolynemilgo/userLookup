@@ -1,0 +1,24 @@
+{
+  "name": "userlookup",
+  "description": "Allows lookup for github users",
+  "main": "index.js",
+  "authors": [
+    "carolyneMilgo"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "lookup"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}

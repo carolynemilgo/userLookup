@@ -1,0 +1,13 @@
+.top{
+
+  height:150px;
+
+}
+.bottom{
+  height:150px;
+}
+.tableStyle{
+
+  border: 2px;
+  display:none;
+}
