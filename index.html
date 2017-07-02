@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!-- <script src="js/jquery.min.js"></script> -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <script src="build/js/vendor.min.js"></script>
+  <link rel="stylesheet" href="build/css/vendor.css">
   <script type="text/javascript" src="build/js/app.js"></script>
-  <link href="css/style.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/user-interface.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <title>Github User Look Up</title>
+</head>
 
+<body>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <title>Github User Look Up</title>
-  </head>
   <body>
-    <div class="container top">
-
+    <div class="parallax"></div>
+    <div class="row">
+      <div class="col-md-12 layer">
+        <div class="col-md-3"></div>
+        <form id="search">
+          <div id="rcorners1" class="col-md-6" align="center">
+            <img src="images/cat.jpg">
+            </br>
+            <label for="gitName"><strong>Enter a username to lookup this techie on Github</strong></label><br>
+            <input id="lookUp" type="text">
+            <button class="btn" type=submit id="searchButton">Search</button>
+          </div>
+        </form>
+        <div class="col-md-3"></div>
+      </div>
     </div>
-<div class="container-fluid" align="center">
-  <div>
-    <label for="gitName">Enter name to lookup this techie on Github</label><br>
-    <input id="lookUp" type="text">
-    <button class="btn" type=submit id="searchButton">Search</button>
-  </div>
-  <div class="results">
-  </div>
-  <div class="image">
-  </div>
- <div class="totalRepos">
-  </div>
-  <div class="repos">
-  </div>
-  <table class="tableStyle">
-    <tr>
+    <div class="row stats">
+      <div class="col-md-2"></div>
+      <div class="col-md-9" id="rcorners2">
+        <div class="col-md-3" align="center">
+          <h5><strong>Search results for</strong></h5>
+          <h4 class="results"></h4>
+        </div>
+        <div class="col-md-3" align="center">
+          <h5><strong>Total number of repos are</strong></h5>
+          <h4 class="totalRepos"></h4>
+        </div>
+        <div class="col-md-3" align="center">
+          <h5><strong>URL to Github repos is:</strong></h5>
+          <div class="repos">
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 coder">
+        <div class="col-md-12" id="rcorner3">
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <div class="image" style="max-width:50% max-height:50%"></div>
+          </div>
+          <div class="col-md-6" id="rcorner3">
+            <table class="tableStyle">
+              <tr>
                 <td>
-    <ol class="projects">Repo Names</ol>
-</td>
-<td>
-      <ol class="description">Description</ol>
-    </td>
-      <tr>
-  </table>
-  <!-- <div class="projects">
-  </div>
-  <div class="description">
-  </div> -->
-</div>
-<div class="container bottom">
-
-</div>
+                  <ol class="projects"><strong>Names of projects completed</strong></ol>
+                </td>
+                <td>
+                  <ol class="description"><strong>Description of projects</strong></ol>
+                </td>
+                <tr>
+            </table>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"></div>
   </body>
+
 </html>

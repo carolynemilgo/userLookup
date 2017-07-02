@@ -1,9 +1,12 @@
+//user-interface logic
 var Gituser = require("./../js/request.js").userModule;
 
 $(document).ready(function() {
-  $("#searchButton").click(function() {
-    
+  $("form#search").submit(function(event) {
+    event.preventDefault();
+
     var userName = $('#lookUp').val();
+    $('#lookUp').val("");
     var newUser = new Gituser(userName);
     newUser.searchName();
     newUser.lookRepos();
