@@ -6,6 +6,7 @@ function Gituser(userName) {
   }
 Gituser.prototype.searchName = function() {
   $.get('https://api.github.com/users/' + this.userName + '?access_token=' + apiKey).then(function(response) {
+
     $('.results').text(response.name);
     $('.image').append('<img src="' + response.avatar_url + '">');
     $('.totalRepos').text(response.public_repos);
