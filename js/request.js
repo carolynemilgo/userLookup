@@ -10,6 +10,7 @@ Gituser.prototype.searchName = function() {
     $('.results').text(response.name);
     $('.image').append('<img src="' + response.avatar_url + '">');
     $('.totalRepos').text(response.public_repos);
+    console.log("hello");
     $('.repos').append('<a href="https://github.com/' + this.userName + '?tab=repositories">' + response.repos_url + '</a>');
   }).fail(function(error) {
     alert("Sorry,try searching with the username");

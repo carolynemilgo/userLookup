@@ -2,15 +2,23 @@
 var Gituser = require("./../js/request.js").userModule;
 
 $(document).ready(function() {
+
   $("form#search").submit(function(event) {
     event.preventDefault();
 
+  // $("#searchButton").click(function() {
+  //   // $("#repo").empty();
+
     var userName = $('#lookUp').val();
     $('#lookUp').val("");
+    $('.tableStyle').val("");
+
     var newUser = new Gituser(userName);
     newUser.searchName();
     newUser.lookRepos();
-  });
+
+  // });
+});
 });
 
 //backend-logic
@@ -25,6 +33,7 @@ Gituser.prototype.searchName = function() {
     $('.results').text(response.name);
     $('.image').append('<img src="' + response.avatar_url + '">');
     $('.totalRepos').text(response.public_repos);
+    console.log("hello");
     $('.repos').append('<a href="https://github.com/' + this.userName + '?tab=repositories">' + response.repos_url + '</a>');
   }).fail(function(error) {
     alert("Sorry,try searching with the username");
